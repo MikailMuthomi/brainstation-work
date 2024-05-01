@@ -8,12 +8,38 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to the BrainStation Travel Site</h1>
+        <nav class="navbar">
+            <a href="index.html" class="navbar__logo">TravelSite</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item"><a href="index.html" class="navbar__link navbar__link--active">Home</a></li>
+                <li class="navbar__item"><a href="iceland.html" class="navbar__link">Iceland</a></li>
+                <li class="navbar__item"><a href="greece.html" class="navbar__link">Greece</a></li>
+                <li class="navbar__item"><a href="hawaii.html" class="navbar__link">Hawaii</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <section>
-            <h2>Discover Your Next Adventure</h2>
-            <p>Explore the world with us.</p>
+        <section class="hero">
+            <h1>Travelling Comes With Endless Discoveries</h1>
+            <p>Don’t let your dreams be just dreams. Experience the world by booking a vacation with us now.</p>
+            <button class="button hero__button">Get Started</button>
+        </section>
+        <section class="recommendations">
+            <h2>Explore Our Destinations</h2>
+            <div class="card-container">
+                <a href="iceland.html" class="card">
+                    <img src="path/to/iceland-image.jpg" alt="Iceland" class="card__image">
+                    <p class="card__destination">Iceland</p>
+                </a>
+                <a href="greece.html" class="card">
+                    <img src="path/to/greece-image.jpg" alt="Greece" class="card__image">
+                    <p class="card__destination">Greece</p>
+                </a>
+                <a href="hawaii.html" class="card">
+                    <img src="path/to/hawaii-image.jpg" alt="Hawaii" class="card__image">
+                    <p class="card__destination">Hawaii</p>
+                </a>
+            </div>
         </section>
     </main>
     <footer>
@@ -21,3 +47,4 @@
     </footer>
 </body>
 </html>
+
