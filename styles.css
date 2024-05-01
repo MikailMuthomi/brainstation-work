@@ -1,13 +1,14 @@
-/* Reset styles */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body, h1, h2, p, ul, li, a {
+body {
     font-family: 'Verdana', sans-serif;
-    color: #335576;
+    color: #335576; /* Text color as specified */
+    background-color: #FEFAF5; /* Background color for the site */
 }
 
 a {
@@ -17,39 +18,49 @@ a {
 
 /* Navigation Bar */
 .navbar {
-    background-color: #FFFFFF;
+    background-color: #FFFFFF; /* White background */
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .navbar__menu {
     list-style: none;
     display: flex;
-    justify-content: center;
 }
 
 .navbar__item {
-    padding: 0 20px;
+    padding: 0 15px; /* Space between menu items */
 }
 
 .navbar__link--active {
     text-decoration: underline;
-    text-decoration-color: #DB7A4E;
+    text-decoration-color: #DB7A4E; /* Underline color for the active page */
+}
+
+.navbar__logo {
+    color: #335576; /* Logo text color */
+    font-weight: bold;
 }
 
 /* Hero Section */
 .hero {
-    background-color: #FEFAF5;
-    padding: 100px 20px 50px;
+    background-color: #FEFAF5; /* Light background for hero */
     text-align: left;
+    padding: 100px 20px;
+    background-image: url('assets/Images/hero.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 400px; /* Minimum height for hero section */
 }
 
 .hero__button {
-    background-color: #DB7A4E;
+    background-color: #DB7A4E; /* Button color as per mockup */
     color: white;
     padding: 10px 20px;
     border: none;
@@ -57,18 +68,22 @@ a {
 }
 
 /* Recommendations Section */
+.recommendations {
+    padding: 20px;
+    text-align: center;
+}
+
 .card-container {
     display: flex;
     justify-content: space-around;
-    padding: 20px;
+    margin-top: 20px;
 }
 
 .card {
-    border-radius: 5px;
-    border: 1px solid rgba(0,0,0,0.2);
-    box-shadow: 0 4px 4px rgba(0,0,0,0.2);
     width: 300px;
-    text-align: center;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 }
 
 .card__image {
@@ -79,13 +94,24 @@ a {
     border-top-right-radius: 5px;
 }
 
+.card__destination {
+    padding: 5px 10px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white; /* Ensuring text visibility on image */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
 /* Footer */
 footer {
     background-color: #FEFAF5;
     color: #335576;
     text-align: center;
     padding: 10px;
+    width: 100%;
     position: fixed;
     bottom: 0;
-    width: 100%;
 }
+
+
